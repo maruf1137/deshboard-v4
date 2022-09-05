@@ -273,201 +273,112 @@
 		<!-- End Sidebar-->
 
 		<main id="main" class="main">
-			<div class="pagetitle d-flex">
+			<!-- big devices -->
+			<div class="pagetitle justify-content-between d-none d-lg-flex">
 				<div>
 					<h1>Dashboard</h1>
 				</div>
 
-				<div class="d-flex ms-auto">
-					<div class="notification me-2">
-						<img src="assets/img/11.png" alt="" />
-					</div>
-					<div class="Profile">
-						<img src="assets/img/profile-img.jpg" alt="" />
-					</div>
-				</div>
+				<a href="#" class="btn btn-update">Explore updates</a>
+
+				<button class="Profile">
+					<img src="assets/img/profile-img.jpg" alt="" />
+				</button>
+			</div>
+
+			<!-- small devices -->
+			<div class="pagetitle d-flex justify-content-between d-lg-none">
+				<h1>Dashboard</h1>
 			</div>
 			<!-- End Page Title -->
-
-			<div class="dashBoardImages loading">
-				<div class="SomePadding">
-					<!-- <h1 class="loading"></h1>
-					<h2 class="loading"></h2>
-					<p class="loading"></p>
-					<button class="loading">Explore updates</button> -->
-					<h1 class="loading">We updated our cancelation</h1>
-					<h1 class="loading">policy to ensure the user experience</h1>
-					<p class="loading">Learn more details on our latest blog post</p>
-					<button class="loading">Explore updates</button>
-				</div>
-			</div>
 
 			<section class="section dashboard pb-4 mt-5">
 				<div class="row gap g-5">
 					<!-- Reports -->
-					<div class="col-lg-6">
-						<div class="d-flex justify-content-between align-items-start">
-							<h5 class="card-title loading"></h5>
-							<!-- <h5 class="card-title loading">Your listing views</h5> -->
-							<div class="filter loading">
-								<!-- <img src="assets/img/3.png" alt="" /> <span>Last 7 days</span> -->
+
+					<div class="col-lg-6 border-right">
+						<div class="dashBoardImages loading d-none d-lg-block">
+							<div class="SomePadding">
+								<h1 class="loading"></h1>
+								<!-- <h1 class="loading">Learn more details on our latest blog post</h1> -->
+								<p class="loading"></p>
+								<!-- <button class="loading">Explore updates</button> -->
 							</div>
 						</div>
-						<div class="card loading">
-							<div class="card-body">
-								<!-- Line Chart -->
-								<div id="reportsChart"></div>
-								<script>
-									document.addEventListener('DOMContentLoaded', () => {
-										new ApexCharts(document.querySelector('#reportsChart'), {
-											series: [
-												{
-													name: 'Views',
-													data: [11, 32, 45, 32, 34, 52, 41],
-												},
-											],
-											chart: {
-												height: 250,
-												type: 'area',
-												toolbar: {
-													show: false,
-												},
-											},
-											markers: {
-												size: 4,
-											},
-											colors: ['#ff771d'],
-											fill: {
-												type: 'gradient',
-												gradient: {
-													shadeIntensity: 1,
-													opacityFrom: 0.3,
-													opacityTo: 0.4,
-													stops: [0, 90, 100],
-												},
-											},
-											dataLabels: {
-												enabled: false,
-											},
-											stroke: {
-												curve: 'smooth',
-												width: 1,
-											},
 
-											tooltip: {
-												x: {
-													format: 'dd/MM/yy HH:mm',
+						<div class="reportsChart-wrapper mt-5">
+							<div class="d-flex justify-content-between align-items-start">
+								<h5 class="card-title loading"></h5>
+								<!-- content comes from skeleton.js  -->
+								<button class="btn filter loading">
+									<!-- content comes from skeleton.js -->
+								</button>
+							</div>
+							<div class="card loading">
+								<div class="card-body">
+									<!-- Line Chart -->
+									<div id="reportsChart"></div>
+									<script>
+										document.addEventListener('DOMContentLoaded', () => {
+											new ApexCharts(document.querySelector('#reportsChart'), {
+												series: [
+													{
+														name: 'Views',
+														data: [11, 32, 45, 32, 34, 52, 41],
+													},
+												],
+												chart: {
+													height: 250,
+													type: 'area',
+													toolbar: {
+														show: false,
+													},
 												},
-											},
-										}).render();
-									});
-								</script>
-								<!-- End Line Chart -->
+												markers: {
+													size: 4,
+												},
+												colors: ['#ff771d'],
+												fill: {
+													type: 'gradient',
+													gradient: {
+														shadeIntensity: 1,
+														opacityFrom: 0.3,
+														opacityTo: 0.4,
+														stops: [0, 90, 100],
+													},
+												},
+												dataLabels: {
+													enabled: false,
+												},
+												stroke: {
+													curve: 'smooth',
+													width: 1,
+												},
+
+												tooltip: {
+													x: {
+														format: 'dd/MM/yy HH:mm',
+													},
+												},
+											}).render();
+										});
+									</script>
+									<!-- End Line Chart -->
+								</div>
 							</div>
 						</div>
 					</div>
-					<!-- End Reports -->
 
 					<div class="col-lg-6">
-						<!-- performance -->
-						<div class="performance">
-							<div>
-								<p class="AuctionsP loading"></p>
-								<!-- <p class="AuctionsP loading">Auctions performance</p> -->
-							</div>
+						<div class="paisano-title d-none d-lg-block">
+							<!-- <h2 class="heading-2 mb-5 loading">E & S Auto Paisano</h2> -->
+							<h2 class="heading-2 mb-5 loading"></h2>
 
-							<div class="ms-auto filter loading">
-								<!-- <img src="assets/img/3.png" alt="" class="me-1" />
-								<span class="Last7">Last 7 days</span> -->
-							</div>
+							<!-- <h3 class="mb-4 loading">Thursday, 14 June 2022</h3> -->
+							<h3 class="mb-4 loading"></h3>
 						</div>
-						<!-- performance -->
 
-						<div class="CarBoxes">
-							<!-- car box  1-->
-							<div class="loading">
-								<div class="CarBox">
-									<div class="carPhoto">
-										<img src="assets/img/Img (1).png" alt="" />
-									</div>
-									<div class="carText">
-										<p>
-											2013 Subaru Forester <br />
-											Premium Plus
-										</p>
-									</div>
-									<div class="carViews ms-auto">
-										<div class="MoreViews me-4">
-											<h4>12,600</h4>
-											<p>Views</p>
-										</div>
-										<div class="MoreViews me-3">
-											<h4>12,6k</h4>
-											<p>Last Bid</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- car box  -->
-
-							<!-- car box  2-->
-							<div class="loading">
-								<div class="CarBox mt-2">
-									<div class="carPhoto">
-										<img src="assets/img/Img (1).png" alt="" />
-									</div>
-									<div class="carText">
-										<p>Used 2010 BMW X3 <br />Sport package</p>
-									</div>
-									<div class="carViews ms-auto">
-										<div class="MoreViews me-4">
-											<h4>13,890</h4>
-											<p>Views</p>
-										</div>
-										<div class="MoreViews me-3">
-											<h4>12,7k</h4>
-											<p>Last Bid</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- car box  -->
-
-							<!-- car box  3-->
-							<div class="loading">
-								<div class="CarBox mt-2">
-									<div class="carPhoto">
-										<img src="assets/img/Img (2).png" alt="" />
-									</div>
-									<div class="carText">
-										<p>2016 Toyota <br />BRZ</p>
-									</div>
-									<div class="carViews ms-auto">
-										<div class="MoreViews me-4">
-											<h4>13,890</h4>
-											<p>Views</p>
-										</div>
-										<div class="MoreViews me-3">
-											<h4>12,7k</h4>
-											<p>Last Bid</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- car box 3 -->
-						</div>
-					</div>
-
-					<!-- <hr class="Hr" /> -->
-				</div>
-			</section>
-			<!-- End Right side columns -->
-			<!-- End News & Updates -->
-
-			<section class="pt-5">
-				<div class="DateSection">
-					<div class="row g-5">
-						<div class="col-lg-6">
+						<div>
 							<!-- performance -->
 							<div class="performance d-flex justify-content-between">
 								<div>
@@ -476,8 +387,8 @@
 								</div>
 
 								<div class="loading">
-									<div class="filterd">
-										<img src="assets/img/3.png" alt="" /> <span class="Last7">January</span>
+									<div class="filter-january">
+										<!-- <img src="assets/img/3.png" alt="" /> <span class="Last7">January</span> -->
 									</div>
 								</div>
 							</div>
@@ -555,120 +466,107 @@
 							</div>
 						</div>
 
-						<div class="BarGraph col-lg-6">
-							<div class="performance d-flex justify-content-between">
+						<div class="mt-5 DateSection BarGraph">
+							<!-- performance -->
+							<div class="performance">
 								<div>
 									<p class="AuctionsP loading"></p>
-									<!-- <p class="AuctionsP">Sales</p> -->
+									<!-- <p class="AuctionsP loading">Auctions performance</p> -->
 								</div>
 
-								<div class="filter loading">
-									<!-- <img src="assets/img/3.png" alt="" /> <span class="Last7">Last 7 Days</span> -->
+								<div class="ms-auto filter loading">
+									<!-- <img src="assets/img/3.png" alt="" class="me-1" />
+									<span class="Last7">Last 7 days</span> -->
 								</div>
 							</div>
+							<!-- performance -->
 
-							<div class="chartBox card loading">
-								<canvas id="myChart" class="card-body"></canvas>
+							<div class="CarBoxes">
+								<!-- car box  1-->
+								<div class="loading">
+									<div class="CarBox">
+										<div class="carPhoto">
+											<img src="assets/img/Img (1).png" alt="" />
+										</div>
+										<div class="carText">
+											<p>
+												2013 Subaru Forester <br />
+												Premium Plus
+											</p>
+										</div>
+										<div class="carViews ms-auto">
+											<div class="MoreViews me-4">
+												<h4>12,600</h4>
+												<p>Views</p>
+											</div>
+											<div class="MoreViews me-3">
+												<h4>12,6k</h4>
+												<p>Last Bid</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- car box  -->
+
+								<!-- car box  2-->
+								<div class="loading">
+									<div class="CarBox mt-2">
+										<div class="carPhoto">
+											<img src="assets/img/Img (1).png" alt="" />
+										</div>
+										<div class="carText">
+											<p>Used 2010 BMW X3 <br />Sport package</p>
+										</div>
+										<div class="carViews ms-auto">
+											<div class="MoreViews me-4">
+												<h4>13,890</h4>
+												<p>Views</p>
+											</div>
+											<div class="MoreViews me-3">
+												<h4>12,7k</h4>
+												<p>Last Bid</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- car box  -->
+
+								<!-- car box  3-->
+								<div class="loading">
+									<div class="CarBox mt-2">
+										<div class="carPhoto">
+											<img src="assets/img/Img (2).png" alt="" />
+										</div>
+										<div class="carText">
+											<p>2016 Toyota <br />BRZ</p>
+										</div>
+										<div class="carViews ms-auto">
+											<div class="MoreViews me-4">
+												<h4>13,890</h4>
+												<p>Views</p>
+											</div>
+											<div class="MoreViews me-3">
+												<h4>12,7k</h4>
+												<p>Last Bid</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- car box 3 -->
 							</div>
 						</div>
 					</div>
+
+					<!-- End Reports -->
 				</div>
 			</section>
+			<!-- End Right side columns -->
+			<!-- End News & Updates -->
 
 			<!-- Remove the container if you want to extend the Footer to full width. -->
 			<div class="mt-5">
-				<!-- Footer -->
-				<footer class="text-center text-lg-start text-white FooterArea">
-					<!-- Section: Links  -->
-					<section class="">
-						<div class="container text-center text-md-start mt-5">
-							<!-- Grid row -->
-							<div class="row mt-3">
-								<!-- Grid column -->
-								<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 FooterText">
-									<!-- Content -->
-									<h6 class="text-uppercase fw-bold About">About</h6>
-									<p>
-										<a href=""> How it works</a>
-									</p>
-									<p>
-										<a href="">Careers</a>
-									</p>
-									<p>
-										<a href="">About us</a>
-									</p>
-
-									<p>
-										<a href="">Media</a>
-									</p>
-								</div>
-
-								<!-- Grid column -->
-								<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 FooterText">
-									<!-- Content -->
-									<h6 class="text-uppercase fw-bold About">Community</h6>
-									<p>
-										<a href="">Against Discrimination</a>
-									</p>
-									<p>
-										<a href="">Invite friends</a>
-									</p>
-									<p>
-										<a href="">Gift cards</a>
-									</p>
-								</div>
-
-								<!-- Grid column -->
-
-								<!-- Grid column -->
-								<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 FooterText">
-									<!-- Content -->
-									<h6 class="text-uppercase fw-bold About">Become seller</h6>
-									<p>
-										<a href="">Add your vehicle</a>
-									</p>
-									<p>
-										<a href="">Business account</a>
-									</p>
-									<p>
-										<a href="">Community</a>
-									</p>
-
-									<p>
-										<a href="">Media</a>
-									</p>
-								</div>
-
-								<!-- Grid column -->
-
-								<!-- Grid column -->
-								<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 FooterText">
-									<!-- Content -->
-									<h6 class="text-uppercase fw-bold About">Bookings support</h6>
-									<p>
-										<a href="">Updates for COVID-19</a>
-									</p>
-									<p>
-										<a href="">Help Center</a>
-									</p>
-									<p>
-										<a href="">Support</a>
-									</p>
-
-									<p>
-										<a href="">Trust & Safety</a>
-									</p>
-								</div>
-
-								<!-- Grid column -->
-							</div>
-							<!-- Grid row -->
-						</div>
-					</section>
-					<!-- Section: Links  -->
-				</footer>
 				<!-- Copyright -->
-				<div class="FooterTextArea">
+				<div class="FooterTextArea d-flex align-items-center justify-content-between">
 					<div class="TermText">
 						<p>
 							<a href="" class="Privacy">Privacy Policy </a>
@@ -677,9 +575,10 @@
 						</p>
 					</div>
 
-					<div class="ms-auto">
-						<img src="assets/img/Language.png" alt="" />
-						<img src="assets/img/Currency.png" alt="" class="ms-2" />
+					<div class="d-flex align-items-center powered">
+						<!-- <img src="assets/img/Language.png" alt="" /> -->
+						<img src="assets/img/world-ico.png" alt="" class="mr-1" />
+						<p class="text m-0">Powered by: <a href="dilerflow.com">Dilerflow.com</a></p>
 					</div>
 				</div>
 				<!-- Copyright -->
